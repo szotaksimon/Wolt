@@ -4,6 +4,101 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Statisztika">
+    tools:context=".Statisztika"
+    android:orientation="vertical"
+    android:layout_centerHorizontal="true"
+    android:gravity="center_horizontal"
+    android:backgroundTint="#424242">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Statisztika"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="15sp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Bérszámolás:"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        />
+
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/txtBruttoStatisztika"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:padding="3dp"
+        android:text="Tesztszöveg:    as125da"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/txtNettoStatisztika"
+        android:layout_marginLeft="5dp"
+        android:padding="3dp"
+        android:text="Tesztszöveg:    as125da"
+
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/txtAdoStatisztika"
+        android:layout_marginLeft="5dp"
+        android:padding="3dp"
+        android:text="Tesztszöveg:    as125da"
+        />
+
+
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Tankolás:"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/txtMegtettTavolsagStatisztika"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:padding="3dp"
+        android:text="Tesztszöveg:    as125da"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/txtTankolasStatisztika"
+        android:layout_marginLeft="5dp"
+        android:padding="3dp"
+        android:text="Tesztszöveg:    as125da"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/txtNetto_TankolasStatisztika"
+        android:layout_marginLeft="5dp"
+        android:padding="3dp"
+        android:text="Tesztszöveg:    as125da"
+        />
 
 </LinearLayout>
