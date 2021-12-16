@@ -24,6 +24,7 @@ public class Penzugy extends AppCompatActivity {
     private Button btnVisszaPenzugy;
     private int beBruttoInt;
     private int beNettoInt;
+    private DBHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +35,12 @@ public class Penzugy extends AppCompatActivity {
         btnHozzaad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String beBrutto = editBefolytBrutto.toString().trim();
-                String beNetto = editBefolytNetto.toString().trim();
-                beBruttoInt = editToInt(beBrutto);
-                beNettoInt = editToInt(beNetto);
+                String beBrutto = editBefolytBrutto.getText().toString().trim();
+                String beNetto = editBefolytNetto.getText().toString().trim();
+                beBruttoInt = Integer.parseInt(beBrutto);
+                beNettoInt = Integer.parseInt(beNetto);
 
+                db.updateStat(beBruttoInt,beNettoInt,0,0);
             }
         });
 
@@ -63,8 +65,9 @@ public class Penzugy extends AppCompatActivity {
 
     private void inti() {
         editBefolytBrutto = findViewById(R.id.editBefolytBrutto);
-        editBefolytNetto = findViewById(R.id.editBefolytBrutto);
+        editBefolytNetto = findViewById(R.id.editBefolytNetto);
         btnHozzaad = findViewById(R.id.btnHozzaad);
         btnVisszaPenzugy = findViewById(R.id.btnVisszaPenzugy);
+        db = new DBHelper(this);
     }
 }
