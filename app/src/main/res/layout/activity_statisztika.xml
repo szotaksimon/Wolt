@@ -14,9 +14,9 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:text="Statisztika"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="5dp"
-        android:textSize="15sp"
+        android:textSize="35sp"
         android:textAllCaps="true"
         android:textStyle="bold"
         />
@@ -25,9 +25,9 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:text="Bérszámolás:"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:layout_marginLeft="5dp"
-        android:textSize="12sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         />
 
@@ -36,9 +36,10 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:id="@+id/txtBruttoStatisztika"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
-        android:padding="3dp"
+        android:textSize="18sp"
+        android:padding="4dp"
         android:text="Tesztszöveg:    as125da"
         />
 
@@ -47,7 +48,8 @@
         android:layout_width="match_parent"
         android:id="@+id/txtNettoStatisztika"
         android:layout_marginLeft="5dp"
-        android:padding="3dp"
+        android:textSize="18sp"
+        android:padding="4dp"
         android:text="Tesztszöveg:    as125da"
 
         />
@@ -57,7 +59,8 @@
         android:layout_width="match_parent"
         android:id="@+id/txtAdoStatisztika"
         android:layout_marginLeft="5dp"
-        android:padding="3dp"
+        android:textSize="18sp"
+        android:padding="4dp"
         android:text="Tesztszöveg:    as125da"
         />
 
@@ -69,7 +72,7 @@
         android:text="Tankolás:"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="5dp"
-        android:textSize="12sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         />
 
@@ -78,8 +81,9 @@
         android:layout_width="match_parent"
         android:id="@+id/txtMegtettTavolsagStatisztika"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:padding="3dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:padding="4dp"
         android:text="Tesztszöveg:    as125da"
         />
 
@@ -88,7 +92,8 @@
         android:layout_width="match_parent"
         android:id="@+id/txtTankolasStatisztika"
         android:layout_marginLeft="5dp"
-        android:padding="3dp"
+        android:textSize="18sp"
+        android:padding="4dp"
         android:text="Tesztszöveg:    as125da"
         />
 
@@ -97,7 +102,8 @@
         android:layout_width="match_parent"
         android:id="@+id/txtNetto_TankolasStatisztika"
         android:layout_marginLeft="5dp"
-        android:padding="3dp"
+        android:padding="4dp"
+        android:textSize="18sp"
         android:text="Tesztszöveg:    as125da"
         />
 
