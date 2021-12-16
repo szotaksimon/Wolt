@@ -17,22 +17,22 @@
         android:text="Pénzügy"
         android:id="@+id/btnPenzugy"
         android:layout_marginTop="265dp"
-        android:backgroundTint="#0090D5"
-        />
+        android:backgroundTint="#00C4FF"
+        android:textColor="@color/white"        />
     <Button
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Tankolás"
         android:id="@+id/btnTankolas"
-        android:backgroundTint="#0090D5"
-        />
+        android:backgroundTint="#00C4FF"
+        android:textColor="@color/white"        />
 
     <Button
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Statisztika"
         android:id="@+id/btnStatisztika"
-        android:backgroundTint="#0090D5"
-        />
+        android:backgroundTint="#00C4FF"
+        android:textColor="@color/white"        />
 
 </LinearLayout>

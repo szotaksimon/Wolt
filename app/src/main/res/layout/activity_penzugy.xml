@@ -17,12 +17,6 @@
         android:id="@+id/editBefolytBrutto"
         />
 
-    <EditText
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:hint="Megtett távolság"
-        android:id="@+id/editTavolsag"
-        />
 
     <EditText
         android:layout_height="wrap_content"
@@ -36,7 +30,8 @@
         android:layout_width="match_parent"
         android:text="Hozzád"
         android:id="@+id/btnHozzaad"
-        android:backgroundTint="#0090D5"
+        android:backgroundTint="#00C4FF"
+        android:textColor="@color/white"
         />
 
     <Button
@@ -44,7 +39,8 @@
         android:layout_width="match_parent"
         android:text="Vissza"
         android:id="@+id/btnVisszaPenzugy"
-        android:backgroundTint="#0090D5"
+        android:backgroundTint="#00C4FF"
+        android:textColor="@color/white"
         />
 
 </LinearLayout>
