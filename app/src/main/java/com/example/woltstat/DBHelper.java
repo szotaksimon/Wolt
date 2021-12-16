@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 // https://developer.android.com/reference/android/database/sqlite/SQLiteOpenHelper
 // https://developer.android.com/reference/android/database/sqlite/SQLiteDatabase
@@ -47,19 +48,35 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    /*public boolean bruttoNettoRogzit(int brutto, int netto){
+    public void updateStat(int brutto, int netto, int megtettKM, int tank){
         SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-    }*/
+        Cursor frissitesreVar = this.listaz();
+        Log.d("Cursor size: ", String.valueOf(frissitesreVar.getCount()));
+        frissitesreVar.moveToFirst();
+        int bruttoGet = frissitesreVar.getInt(0);
+        Log.d("Lekérdezett bruttó: ", String.valueOf(bruttoGet));
+        Log.d("Beadott bruttó: ", String.valueOf(brutto));
+        int nettoGet = frissitesreVar.getInt(1);
+        Log.d("Lekérdezett netto: ", String.valueOf(nettoGet));
+        Log.d("Beadott netto: ", String.valueOf(netto));
+        int megtettKmGet = frissitesreVar.getInt(2);
+        Log.d("Lekérdezett megtett km: ", String.valueOf(megtettKmGet));
+        int tankGet = frissitesreVar.getInt(3);
+        Log.d("Lekérdezett tank: ", String.valueOf(tankGet));
 
-    public boolean rogzites(int brutto, int netto, int megtettKM, int tank){
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(COL_BRUTTO, brutto);
-        values.put(COL_NETTO, netto);
-        values.put(COL_MEGTETT_KM, megtettKM);
-        values.put(COL_TANKOLAS, tank);
-        return db.insert(TABLE_NAME, null, values) != -1;
+        int frissitettBrutto = brutto + bruttoGet;
+        Log.d("Módosított bruttó: ", String.valueOf(frissitettBrutto));
+        int frissitettNetto = netto + nettoGet;
+        Log.d("Módosított netto: ", String.valueOf(frissitettNetto));
+        int frissitettMegtettKm = megtettKM + megtettKmGet;
+        Log.d("Módosított megtett km: ", String.valueOf(frissitettMegtettKm));
+        int frissitettTank = tank + tankGet;
+        Log.d("Módosított tank: ", String.valueOf(frissitettTank));
+
+        db.execSQL("UPDATE " + TABLE_NAME + " SET " + COL_BRUTTO+ " = " + frissitettBrutto);
+        db.execSQL("UPDATE " + TABLE_NAME + " SET " + COL_NETTO+ " = " + frissitettNetto);
+        db.execSQL("UPDATE " + TABLE_NAME + " SET " + COL_MEGTETT_KM+ " = " + frissitettMegtettKm);
+        db.execSQL("UPDATE " + TABLE_NAME + " SET " + COL_TANKOLAS+ " = " + frissitettTank);
     }
 
     public Cursor listaz() {
