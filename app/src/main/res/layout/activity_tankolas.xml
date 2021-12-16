@@ -8,13 +8,14 @@
     android:orientation="vertical"
     android:layout_centerHorizontal="true"
     android:gravity="center_horizontal"
-    android:backgroundTint="@color/cardview_dark_background">
+    android:backgroundTint="#424242">
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Tankolás összege"
         android:id="@+id/editTankolasOsszege"
+        android:inputType="number"
         />
 
     <EditText
@@ -22,6 +23,7 @@
         android:layout_width="match_parent"
         android:hint="Megtett távolság"
         android:id="@+id/editTavolsag"
+        android:inputType="number"
         />
 
     <EditText
@@ -29,6 +31,7 @@
         android:layout_height="wrap_content"
         android:hint="Km az autóban"
         android:id="@+id/editKmAzAutoban"
+        android:inputType="number"
         />
 
     <Button

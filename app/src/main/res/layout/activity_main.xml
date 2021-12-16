@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:layout_centerHorizontal="true"
     android:gravity="center_horizontal"
-    android:backgroundTint="@color/cardview_dark_background"
+    android:backgroundTint="#424242"
     >
 
     <Button
