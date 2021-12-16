@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Simon/AndroidStudioProjects/WoltStat/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.16197916666666667" />
+        <entry key="..\:/Users/Simon/AndroidStudioProjects/WoltStat/app/src/main/res/drawable/ic_launcher_background.xml" value="0.16197916666666667" />
         <entry key="..\:/Users/Simon/AndroidStudioProjects/WoltStat/app/src/main/res/layout/activity_main.xml" value="0.1693840579710145" />
         <entry key="..\:/Users/Simon/AndroidStudioProjects/WoltStat/app/src/main/res/layout/activity_penzugy.xml" value="0.14583333333333334" />
         <entry key="..\:/Users/Simon/AndroidStudioProjects/WoltStat/app/src/main/res/layout/activity_statisztika.xml" value="0.25" />
