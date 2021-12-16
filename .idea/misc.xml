@@ -3,10 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Simon/AndroidStudioProjects/WoltStat/app/src/main/res/layout/activity_main.xml" value="0.1693840579710145" />
-        <entry key="..\:/Users/Simon/AndroidStudioProjects/WoltStat/app/src/main/res/layout/activity_penzugy.xml" value="0.14583333333333334" />
-        <entry key="..\:/Users/Simon/AndroidStudioProjects/WoltStat/app/src/main/res/layout/activity_statisztika.xml" value="0.14583333333333334" />
-        <entry key="..\:/Users/Simon/AndroidStudioProjects/WoltStat/app/src/main/res/layout/activity_tankolas.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/activity_penzugy.xml" value="0.20104166666666667" />
       </map>
     </option>
   </component>
