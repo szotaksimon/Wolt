@@ -32,6 +32,13 @@ public class DBHelper extends SQLiteOpenHelper {
                 COL_TANKOLAS + " INTEGER NOT NULL " +
                 ");";
         db.execSQL(sql);
+
+        String addRecord = "INSERT INTO "+TABLE_NAME+" ("+
+                COL_BRUTTO +"," + COL_NETTO + ", " + COL_MEGTETT_KM + ", " + COL_TANKOLAS + " )" +
+                "VALUES ( 0, 0, 0, 0);";
+
+        db.execSQL(addRecord);
+
     }
 
     @Override
@@ -39,6 +46,11 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
         onCreate(db);
     }
+
+    /*public boolean bruttoNettoRogzit(int brutto, int netto){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+    }*/
 
     public boolean rogzites(int brutto, int netto, int megtettKM, int tank){
         SQLiteDatabase db = this.getWritableDatabase();
