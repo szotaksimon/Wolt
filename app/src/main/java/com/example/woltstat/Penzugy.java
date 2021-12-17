@@ -32,12 +32,18 @@ public class Penzugy extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_penzugy);
 
-        inti();
+        init();
         btnHozzaad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String beBrutto = editBefolytBrutto.getText().toString().trim();
                 String beNetto = editBefolytNetto.getText().toString().trim();
+                if(beBrutto.isEmpty()){
+                    beBrutto = "0";
+                }
+                if(beNetto.isEmpty()){
+                    beNetto = "0";
+                }
                 beBruttoInt = Integer.parseInt(beBrutto);
                 beNettoInt = Integer.parseInt(beNetto);
 
@@ -73,7 +79,7 @@ public class Penzugy extends AppCompatActivity {
     }
 
 
-    private void inti() {
+    private void init() {
         editBefolytBrutto = findViewById(R.id.editBefolytBrutto);
         editBefolytNetto = findViewById(R.id.editBefolytNetto);
         btnHozzaad = findViewById(R.id.btnHozzaad);
