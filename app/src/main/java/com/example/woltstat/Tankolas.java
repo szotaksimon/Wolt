@@ -23,6 +23,7 @@ public class Tankolas extends AppCompatActivity {
     private EditText editKmAzAutoban;
     private Button btnHozzaadTankolas;
     private Button btnVisszaTankolas;
+    private Button btnStatisztikaTankolas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,15 @@ public class Tankolas extends AppCompatActivity {
                 finish();
             }
         });
+
+        btnStatisztikaTankolas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent tovabbStatisztikara = new Intent(Tankolas.this, Statisztika.class);
+                startActivity(tovabbStatisztikara);
+                finish();
+            }
+        });
     }
 
     private void init(){
@@ -47,5 +57,6 @@ public class Tankolas extends AppCompatActivity {
         editKmAzAutoban = findViewById(R.id.editKmAzAutoban);
         btnHozzaadTankolas = findViewById(R.id.btnHozzaadTankolas);
         btnVisszaTankolas = findViewById(R.id.btnVisszaTankolas);
+        btnStatisztikaTankolas = findViewById(R.id.btnStatisztikaTankolas);
     }
 }

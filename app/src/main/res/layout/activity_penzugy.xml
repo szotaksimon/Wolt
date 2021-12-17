@@ -39,6 +39,15 @@
     <Button
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:text="Statisztika"
+        android:id="@+id/btnStatisztikaPenzugy"
+        android:backgroundTint="#00C4FF"
+        android:textColor="@color/white"
+        />
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
         android:text="Vissza"
         android:id="@+id/btnVisszaPenzugy"
         android:backgroundTint="#00C4FF"

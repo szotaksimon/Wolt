@@ -22,6 +22,7 @@ public class Penzugy extends AppCompatActivity {
     private EditText editBefolytNetto;
     private Button btnHozzaad;
     private Button btnVisszaPenzugy;
+    private Button btnStatisztikaPenzugy;
     private int beBruttoInt;
     private int beNettoInt;
     private DBHelper db;
@@ -52,6 +53,15 @@ public class Penzugy extends AppCompatActivity {
                 finish();
             }
         });
+
+        btnStatisztikaPenzugy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent tovabbStatisztikara = new Intent(Penzugy.this, Statisztika.class);
+                startActivity(tovabbStatisztikara);
+                finish();
+            }
+        });
     }
 
     private int editToInt(String beString){
@@ -68,6 +78,7 @@ public class Penzugy extends AppCompatActivity {
         editBefolytNetto = findViewById(R.id.editBefolytNetto);
         btnHozzaad = findViewById(R.id.btnHozzaad);
         btnVisszaPenzugy = findViewById(R.id.btnVisszaPenzugy);
+        btnStatisztikaPenzugy = findViewById(R.id.btnStatisztikaPenzugy);
         db = new DBHelper(this);
     }
 }
