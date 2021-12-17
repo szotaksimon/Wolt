@@ -13,7 +13,7 @@
     <EditText
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:hint="Befolyt bruttó összeg"
+        android:hint="Bruttó összeg"
         android:id="@+id/editBefolytBrutto"
         android:inputType="number"
         />
@@ -22,7 +22,7 @@
     <EditText
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:hint="Befolyt nettó összeg"
+        android:hint="Nettó összeg"
         android:id="@+id/editBefolytNetto"
         android:inputType="number"
         />

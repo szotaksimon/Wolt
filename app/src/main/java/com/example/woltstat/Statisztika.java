@@ -17,6 +17,7 @@ public class Statisztika extends AppCompatActivity {
     private Button vissza;
     private DBHelper db;
     private TextView brutto;
+    private TextView netto;
 
 
     @Override
@@ -28,7 +29,8 @@ public class Statisztika extends AppCompatActivity {
 
         Cursor lekerdez = db.listaz();
         lekerdez.moveToFirst();
-        brutto.setText(String.valueOf(lekerdez.getInt(0)));
+        brutto.setText("Bruttó bér: " + String.valueOf(lekerdez.getInt(0)) + " Ft");
+        netto.setText("Nettó bér: " + String.valueOf(lekerdez.getInt(1)) + " Ft");
 
         vissza.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +46,7 @@ public class Statisztika extends AppCompatActivity {
     private void init() {
         vissza = findViewById(R.id.btnVisszaStatisztika);
         brutto = findViewById(R.id.txtBruttoStatisztika);
+        netto = findViewById(R.id.txtNettoStatisztika);
         db = new DBHelper(this);
     }
 
