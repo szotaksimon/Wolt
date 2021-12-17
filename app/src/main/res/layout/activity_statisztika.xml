@@ -107,4 +107,14 @@
         android:text="Tesztszöveg:    as125da"
         />
 
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Kezdőlap"
+        android:id="@+id/btnVisszaStatisztika"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#00C4FF"
+        android:textColor="@color/white"
+        />
+
 </LinearLayout>
