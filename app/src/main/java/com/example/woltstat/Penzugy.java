@@ -2,12 +2,15 @@ package com.example.woltstat;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Penzugy extends AppCompatActivity {
 
@@ -48,6 +51,9 @@ public class Penzugy extends AppCompatActivity {
                 beNettoInt = Integer.parseInt(beNetto);
 
                 db.updateBruttoNetto(beBruttoInt,beNettoInt);
+                keyboardClose();
+                setDefaultValueEditTextsClearFocus();
+                Toast.makeText(getApplicationContext(), "Sikeres felvétel", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -70,15 +76,6 @@ public class Penzugy extends AppCompatActivity {
         });
     }
 
-    private int editToInt(String beString){
-        if (beString.isEmpty()){
-            return 0;
-        }else{
-         return Integer.parseInt(beString);
-        }
-    }
-
-
     private void init() {
         editBefolytBrutto = findViewById(R.id.editBefolytBrutto);
         editBefolytNetto = findViewById(R.id.editBefolytNetto);
@@ -86,5 +83,20 @@ public class Penzugy extends AppCompatActivity {
         btnVisszaPenzugy = findViewById(R.id.btnVisszaPenzugy);
         btnStatisztikaPenzugy = findViewById(R.id.btnStatisztikaPenzugy);
         db = new DBHelper(this);
+    }
+
+    private void keyboardClose(){
+        View view = this.getCurrentFocus();
+        if (view != null){
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
+    }
+
+    private void setDefaultValueEditTextsClearFocus(){
+        editBefolytBrutto.setText("");
+        editBefolytNetto.setText("");
+        editBefolytBrutto.clearFocus();
+        editBefolytNetto.clearFocus();
     }
 }
