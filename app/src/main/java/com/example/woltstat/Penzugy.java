@@ -47,7 +47,7 @@ public class Penzugy extends AppCompatActivity {
                 beBruttoInt = Integer.parseInt(beBrutto);
                 beNettoInt = Integer.parseInt(beNetto);
 
-                db.updateStat(beBruttoInt,beNettoInt,0,0);
+                db.updateBruttoNetto(beBruttoInt,beNettoInt);
             }
         });
 
